@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build:
-      dockerfile: Dockerfile  
+      dockerfile: Dockerfile
       context: .
     volumes:
       - ../:/workspace:cached
@@ -12,11 +12,11 @@ services:
       - 4000:4000
     links:
       - db
-  
+
   db:
     image: postgres
     restart: unless-stopped
-    ports: 
+    ports:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: postgres
@@ -25,4 +25,4 @@ services:
       - /postgres-data:/var/lib/postgresql/data
 
 volumes:
-  postgres-data:            
+  postgres-data:

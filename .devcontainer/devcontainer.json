@@ -2,10 +2,12 @@
     "name": "Phoenix + Postgres",
     "dockerComposeFile": "docker-compose.yml",
     "service": "web",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "jakebecker.elixir-ls"
+            ]
+        }
     },
-    "extensions": [
-        "jakebecker.elixir-ls"
-    ]
+    "workspaceFolder": "../pento",
 }
